@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hola Mundo con WebSockets</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link href="/springboot2-websockets-stomp/bootstrap.min.css" rel="stylesheet">
+    <link href="/springboot2-websockets-stomp/main.css" rel="stylesheet">    
+</head>
+<body>
+	<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+	<div id="main-content" class="container">
+	    <div class="row">
+	        <div class="col-md-6">
+	            <form id="frmLogin" class="form-inline">
+	                <div class="form-group">
+	                    <label for="name">username</label>
+	                    <input type="text" id="username" class="form-control" placeholder="ejemplo: pepito">
+	                </div>
+	                <div class="form-group">
+	                    <label for="name">passwcode</label>
+	                    <input type="text" id="passwcode" class="form-control" placeholder="Tu password">
+	                </div>
+	            </form>
+	        </div>
+	         <div class="col-md-6">
+	            <form class="form-inline">
+	                <div class="form-group">
+	                    <button id="connect" class="btn btn-default" type="submit">Connect</button>
+	                </div>
+	                <div class="form-group">
+	                    <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Disconnect
+	                    </button>
+	                </div>
+	            </form>
+	        </div>
+	   </div>
+	   <div class="row">
+	        <div class="col-md-12">
+	            <form id="frmMensaje" class="form">
+	                <div class="form-group">
+	                    <label for="name">Mensaje</label>
+	                    <textarea id="txtMensaje" rows="3" cols="50" placeholder="Tu mensaje aqui..." class="form-control"></textarea>
+	                </div>
+	                <button id="send" class="pull-right btn btn-default" type="submit">Enviar</button>
+	            </form>
+	        </div>
+	    </div>
+	    <div class="row">
+	        <div class="col-md-12">
+	            <table id="conversation" class="table table-striped">
+	                <thead>
+	                <tr>
+	                    <th align="center">Saludos</th>
+	                </tr>
+	                </thead>
+	                <tbody id="saludos">
+	                </tbody>
+	            </table>
+	        </div>
+	    </div>
+	 
+	</div>
+
+    <script src="/springboot2-websockets-stomp/jquery-1.10.2.min.js"></script>
+    <script src="/springboot2-websockets-stomp/app.js"></script>
+    <script src="/springboot2-websockets-stomp/stomp.js"></script>
+</body>
+</html>
